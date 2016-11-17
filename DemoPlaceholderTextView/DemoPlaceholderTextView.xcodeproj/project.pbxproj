@@ -14,7 +14,7 @@
 		A7E659F01B946C9000A85481 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E659EF1B946C9000A85481 /* Images.xcassets */; };
 		A7E659F31B946C9000A85481 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7E659F11B946C9000A85481 /* LaunchScreen.xib */; };
 		A7E659FF1B946C9000A85481 /* DemoPlaceholderTextViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E659FE1B946C9000A85481 /* DemoPlaceholderTextViewTests.m */; };
-		A7E65A0A1B946CBD00A85481 /* PlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E65A091B946CBD00A85481 /* PlaceHolderTextView.m */; };
+		A7E65A0A1B946CBD00A85481 /* SYPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E65A091B946CBD00A85481 /* SYPlaceHolderTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +41,8 @@
 		A7E659F81B946C9000A85481 /* DemoPlaceholderTextViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoPlaceholderTextViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E659FD1B946C9000A85481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7E659FE1B946C9000A85481 /* DemoPlaceholderTextViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoPlaceholderTextViewTests.m; sourceTree = "<group>"; };
-		A7E65A081B946CBD00A85481 /* PlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceHolderTextView.h; sourceTree = "<group>"; };
-		A7E65A091B946CBD00A85481 /* PlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceHolderTextView.m; sourceTree = "<group>"; };
+		A7E65A081B946CBD00A85481 /* SYPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPlaceHolderTextView.h; sourceTree = "<group>"; };
+		A7E65A091B946CBD00A85481 /* SYPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPlaceHolderTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +88,8 @@
 				A7E659E71B946C9000A85481 /* AppDelegate.m */,
 				A7E659E91B946C9000A85481 /* ViewController.h */,
 				A7E659EA1B946C9000A85481 /* ViewController.m */,
-				A7E65A081B946CBD00A85481 /* PlaceHolderTextView.h */,
-				A7E65A091B946CBD00A85481 /* PlaceHolderTextView.m */,
+				A7E65A081B946CBD00A85481 /* SYPlaceHolderTextView.h */,
+				A7E65A091B946CBD00A85481 /* SYPlaceHolderTextView.m */,
 				A7E659EC1B946C9000A85481 /* Main.storyboard */,
 				A7E659EF1B946C9000A85481 /* Images.xcassets */,
 				A7E659F11B946C9000A85481 /* LaunchScreen.xib */,
@@ -227,7 +227,7 @@
 				A7E659EB1B946C9000A85481 /* ViewController.m in Sources */,
 				A7E659E81B946C9000A85481 /* AppDelegate.m in Sources */,
 				A7E659E51B946C9000A85481 /* main.m in Sources */,
-				A7E65A0A1B946CBD00A85481 /* PlaceHolderTextView.m in Sources */,
+				A7E65A0A1B946CBD00A85481 /* SYPlaceHolderTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +424,7 @@
 				A7E65A041B946C9000A85481 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7E65A051B946C9000A85481 /* Build configuration list for PBXNativeTarget "DemoPlaceholderTextViewTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +433,7 @@
 				A7E65A071B946C9000A85481 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,17 +1,17 @@
 //
-//  PlaceHolderTextView.m
-//  DemoPlaceholderTextView
+//  SYPlaceHolderTextView.m
+//  zhangshaoyu
 //
 //  Created by zhangshaoyu on 15/7/8.
 //  Copyright (c) 2015年 365sji. All rights reserved.
 //
 
-#import "PlaceHolderTextView.h"
+#import "SYPlaceHolderTextView.h"
 
 #define originX 8.0
 #define originY 6.0
 
-@interface PlaceHolderTextView () <UITextViewDelegate>
+@interface SYPlaceHolderTextView () <UITextViewDelegate>
 
 @property (nonatomic, strong) UILabel *placeHolderlabel;
 
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation PlaceHolderTextView
+@implementation SYPlaceHolderTextView
 
 - (instancetype)initWithFrame:(CGRect)frame view:(UIView *)view
 {
@@ -34,12 +34,50 @@
             [view addSubview:self];
         }
         
-        [self setUI];
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewEditChanged:) name:UITextViewTextDidChangeNotification object:nil];
+        [self setDefaultInit];
+        self.placeHolderlabel.frame = CGRectMake(originX, originY, (self.frame.size.width - originX * 2), 0.0);
     }
     
     return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self)
+    {
+        [self setDefaultInit];
+        self.placeHolderlabel.frame = CGRectMake(originX, originY, (self.frame.size.width - originX * 2), 0.0);
+    }
+    
+    return self;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self)
+    {
+        [self setDefaultInit];
+    }
+    
+    return self;
+}
+
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    self.placeHolderlabel.frame = CGRectMake(originX, originY, (self.frame.size.width - originX * 2), 0.0);
+}
+
+- (void)setDefaultInit
+{
+    _placeHolderColor = [UIColor colorWithWhite:0.3 alpha:0.2];
+    _placeHolderFont = self.font;
+    
+    [self setUI];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewEditChanged:) name:UITextViewTextDidChangeNotification object:nil];
 }
 
 - (void)dealloc
@@ -53,8 +91,9 @@
 {
     self.delegate = self;
     
-    self.placeHolderlabel = [[UILabel alloc] initWithFrame:CGRectMake(originX, originY, (self.frame.size.width - originX * 2), 0.0)];
+    self.placeHolderlabel = [[UILabel alloc] init];
     [self addSubview:self.placeHolderlabel];
+    self.placeHolderlabel.textColor = _placeHolderColor;
     self.placeHolderlabel.textAlignment = NSTextAlignmentLeft;
     self.placeHolderlabel.numberOfLines = 0;
     self.placeHolderlabel.hidden = YES;
@@ -115,6 +154,11 @@
     if (self.changeRankBlock)
     {
         self.changeRankBlock(textView, range, text);
+    }
+    
+    if (self.isEndReturn && ([text isEqualToString:@"\n"]))
+    {
+        [textView resignFirstResponder];
     }
     
     return YES;
