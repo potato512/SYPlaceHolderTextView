@@ -37,5 +37,5 @@ textview.isEndReturn = YES;
     
 ~~~
 
-#效果图
+# 效果图
 ![placeholderTextView](placeholderTextView.gif)
